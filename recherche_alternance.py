@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import payload
 
 login_url = ("https://epita.net/node?destination=/node")
 jobteaser_url = ("https://epita.jobteaser.com/")
@@ -8,8 +9,8 @@ offres_path = "fr/job-offers"
 dashboard_path = "fr/dashboard"
 
 payload = {
-    "name": "raphael.houver@epita.fr",
-    "pass": "wjp57KcV&E9%h!Mi",
+    "name": payload.name,
+    "pass": payload.password,
     "form_build_id": "form-uIq4OKqKeQNFBk9WXFgNuhO7hZ-0M9kZGD4uIFmtBZI",
     "form_id": "user_login_form",
     "op": "Se connecter"
